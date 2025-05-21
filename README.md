@@ -28,6 +28,13 @@ Dieses Projekt implementiert und vergleicht eine erweiterte Auswahl an Agententy
     - [Genetischer Algorithmus (GA) Agent (`agents/genetic_agent.py`)](#genetischer-algorithmus-ga-agent-agentsgenetic_agentpy)
     - [Evolutionäre Strategien (ES) Agent (`agents/es_agent.py`)](#evolutionäre-strategien-es-agent-agentses_agentpy)
   - [Qualitative Evaluierung der Agenten](#qualitative-evaluierung-der-agenten)
+      - [RANDOM Agent](#random-agent)
+      - [DQN Agent](#dqn-agent)
+      - [GENETIC Agent](#genetic-agent)
+      - [REINFORCE Agent](#reinforce-agent)
+      - [A2C Agent](#a2c-agent)
+      - [PPO Agent](#ppo-agent)
+      - [ES Agent](#es-agent)
   - [Quantitative Evaluierung der Agenten](#quantitative-evaluierung-der-agenten)
   - [Quellen und Inspirationen](#quellen-und-inspirationen)
 
@@ -458,35 +465,35 @@ Neben den rein numerischen Metriken ist eine qualitative Beobachtung des Agenten
 
 Für eine noch detailliertere qualitative Analyse und Dokumentation können GIFs von repräsentativen Testläufen jedes Agenten erstellt werden. Dies kann erreicht werden, indem während der Ausführung von `test.py` (oder einer modifizierten Version davon) der `render_mode` der Umgebung auf `"rgb_array"` gesetzt wird, die einzelnen Frames gesammelt und anschließend mit einer Bibliothek wie `imageio` oder `moviepy` zu einer GIF-Datei zusammengefügt werden.
 
-**Einbindung von GIFs:**
+**Beispielhafte Testläufe als GIFs (jeweils 10 Durchläufe, Seed des ersten Laufs im GIF: 1001):**
 
-*   **RANDOM Agent:**
-    ![Random Agent GIF](gifs/random_combined_10runs_seed1043.gif)
-    *(Chaotische Bewegungen, häufige Abstürze, keine erkennbare Strategie.)*
+#### RANDOM Agent
+![Random Agent Testläufe](gifs/random_combined_10runs_seed1043.gif)
+*(Chaotische Bewegungen, häufige Abstürze, keine erkennbare Strategie.)*
 
-*   **DQN Agent:**
-    ![DQN Agent GIF](gifs/dqn_combined_10runs_seed1043.gif)
-    *(Kann oft erfolgreich landen, aber mit längeren Flugzeiten oder gelegentlichen Fehlern, was die höhere Standardabweichung widerspiegelt. Die Landungen wirken manchmal etwas "mechanisch" oder weniger flüssig.)*
+#### DQN Agent
+![DQN Agent Testläufe](gifs/dqn_combined_10runs_seed1043.gif)
+*(Kann oft erfolgreich landen, aber mit längeren Flugzeiten oder gelegentlichen Fehlern, was die höhere Standardabweichung widerspiegelt. Die Landungen wirken manchmal etwas "mechanisch" oder weniger flüssig.)*
 
-*   **GENETIC Agent:**
-    ![Genetic Agent GIF](gifs/genetic_combined_10runs_seed1043.gif)
-    *(Mit einem hohen Avg Reward und relativ geringer Episodenlänge hat der GA eine sehr effiziente und direkte Landestrategie gelernt. Die Standardabweichung ist moderat, was auf eine gute Konsistenz hindeutet. Evolutionäre Ansätze können manchmal zu überraschenden, aber effektiven Manövern führen.)*
+#### GENETIC Agent
+![Genetic Agent Testläufe](gifs/genetic_combined_10runs_seed1043.gif)
+*(Mit einem hohen Avg Reward und relativ geringer Episodenlänge hat der GA eine sehr effiziente und direkte Landestrategie gelernt. Die Standardabweichung ist moderat, was auf eine gute Konsistenz hindeutet. Evolutionäre Ansätze können manchmal zu überraschenden, aber effektiven Manövern führen.)*
 
-*   **REINFORCE Agent:**
-    ![Reinforce Agent GIF](gifs/reinforce_combined_10runs_seed1043.gif)
-    *(Kann einige erfolgreiche Landungen zeigen, aber auch viele Versuche mit suboptimalen Flugbahnen oder Abstürzen, was die hohe Varianz und den moderaten Avg Reward erklärt. Die Manöver könnten weniger präzise sein als bei PPO oder dem erfolgreichen GA.)*
+#### REINFORCE Agent
+![REINFORCE Agent Testläufe](gifs/reinforce_combined_10runs_seed1043.gif)
+*(Kann einige erfolgreiche Landungen zeigen, aber auch viele Versuche mit suboptimalen Flugbahnen oder Abstürzen, was die hohe Varianz und den moderaten Avg Reward erklärt. Die Manöver könnten weniger präzise sein als bei PPO oder dem erfolgreichen GA.)*
 
-*   **A2C Agent:**
-    ![Advantage Actor Critic Agent GIF](gifs/a2c_combined_10runs_seed1043.gif)
-    *(Der A2C Agent erreicht die "Solved"-Schwelle. Die Manöver sind kompetent, aber vielleicht nicht ganz so effizient oder stabil wie bei PPO sein, was sich in der höheren Standardabweichung und längeren durchschnittlichen Episodenzahl im Vergleich zu PPO zeigt.)*
+#### A2C Agent
+![A2C Agent Testläufe](gifs/a2c_combined_10runs_seed1043.gif)
+*(Der A2C Agent erreicht die "Solved"-Schwelle. Die Manöver sind kompetent, aber vielleicht nicht ganz so effizient oder stabil wie bei PPO sein, was sich in der höheren Standardabweichung und längeren durchschnittlichen Episodenzahl im Vergleich zu PPO zeigt.)*
 
-*   **PPO Agent:**
-    ![Proximal policy optimization Agent GIF](gifs/ppo_combined_10runs_seed1043.gif)
-    *(Erwartungsgemäß sehr stabiles, effizientes und zielgerichtetes Landeverhalten. Die Manöver sind kontrolliert und präzise, was die hohe Durchschnittsbelohnung und die geringe Standardabweichung widerspiegelt. Kurze Flugzeiten sind zu erwarten.)*
+#### PPO Agent
+![PPO Agent Testläufe](gifs/ppo_combined_10runs_seed1043.gif)
+*(Erwartungsgemäß sehr stabiles, effizientes und zielgerichtetes Landeverhalten. Die Manöver sind kontrolliert und präzise, was die hohe Durchschnittsbelohnung und die geringe Standardabweichung widerspiegelt. Kurze Flugzeiten sind zu erwarten.)*
 
-*   **ES Agent:**
-    ![Evolutianary Strategy Agent GIF](gifs/es_combined_10runs_seed1043.gif)
-    *(Trotz der niedrigen Durchschnittsbelohnung ist die Standardabweichung moderat. Die GIFs zeigen, dass der ES-Agent zwar konsistent agiert, aber die erlernte Strategie nicht effektiv zur Landung führt, sondern eher zu schnellen Episodenenden (Abstürzen), was die sehr kurze durchschnittliche Episodenlänge erklärt.)*
+#### ES Agent
+![ES Agent Testläufe](gifs/es_combined_10runs_seed1043.gif)
+*(Trotz der niedrigen Durchschnittsbelohnung ist die Standardabweichung moderat. Die GIFs zeigen, dass der ES-Agent zwar konsistent agiert, aber die erlernte Strategie nicht effektiv zur Landung führt, sondern eher zu schnellen Episodenenden (Abstürzen), was die sehr kurze durchschnittliche Episodenlänge erklärt.)*
 
 **Bei der qualitativen Beobachtung der GIFs und Live-Tests wurden folgende Aspekte betrachtet werden:**
 

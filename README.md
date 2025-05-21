@@ -95,36 +95,44 @@ Dieses Funktionsset macht das Projekt zu einer robusten Plattform für das Erler
 
 ## Ordnerstruktur
 
-lunar_lander_agents/
-├── agents/ # Verzeichnis für alle Agentenimplementierungen
-│ ├── init.py # Macht 'agents' zu einem Python-Paket und exportiert Agentenklassen
-│ ├── base_agent.py # Abstrakte Basisklasse, von der alle Agenten erben
-│ ├── random_agent.py # Implementierung des Zufallsagenten
-│ ├── dqn_agent.py # Implementierung des Deep Q-Network (DQN) Agenten
-│ ├── reinforce_agent.py # Implementierung des REINFORCE (Policy Gradient) Agenten
-│ ├── a2c_agent.py # Implementierung des Advantage Actor-Critic (A2C) Agenten
-│ ├── ppo_agent.py # Implementierung des Proximal Policy Optimization (PPO) Agenten
-│ ├── genetic_agent.py # Implementierung des Genetischen Algorithmus (GA) Agenten und des zugehörigen Controllers
-│ └── es_agent.py # Implementierung des Evolutionäre Strategien (ES) Agenten/Controllers
-│
-├── models/ # Verzeichnis für gespeicherte Modelle und Evaluierungsergebnisse
-│ ├── dqn_lunar_lander.pth # Beispiel: Gespeichertes Modell für den DQN-Agenten (generiert nach Training)
-│ ├── ga_best_lunar_lander.pth # Beispiel: Gespeichertes Modell für den GA-Agenten (generiert nach Training)
-│ ├── reinforce_lunar_lander.pth # Beispiel: Gespeichertes Modell für REINFORCE (generiert)
-│ ├── a2c_lunar_lander.pth # Beispiel: Gespeichertes Modell für A2C (generiert)
-│ ├── ppo_actor_lunar_lander.pth # Beispiel: Gespeichertes Actor-Modell für PPO (generiert)
-│ ├── ppo_critic_lunar_lander.pth# Beispiel: Gespeichertes Critic-Modell für PPO (generiert)
-│ ├── es_lunar_lander.pth # Beispiel: Gespeichertes Modell für ES (generiert)
-│ └── evaluation_summary.csv # CSV-Datei mit den Ergebnissen der vergleichenden Evaluierung (generiert)
-│
-├── config.py # Zentrale Konfigurationsdatei für alle Skripte und Parameter
-├── train.py # Skript zum Trainieren der verschiedenen lernfähigen Agenten
-├── test.py # Skript zum visuellen Testen eines einzelnen, ausgewählten Agenten
-├── evaluate.py # Skript zur vergleichenden Evaluierung aller trainierten Agenten
-├── requirements.txt # Liste der Python-Paketabhängigkeiten
-└── README.md # Diese Beschreibungsdatei
+Die Projektdateien sind wie folgt organisiert, um eine klare Trennung der Verantwortlichkeiten und eine gute Übersichtlichkeit zu gewährleisten:
 
-*Hinweis: Die `.pth`-Modelldateien und die `evaluation_summary.csv` im `models/`-Ordner werden erst nach der erfolgreichen Ausführung der entsprechenden Skripte (`train.py`, `evaluate.py`) erstellt.*
+```text
+lunar_lander_agents/
+├── agents/                     # Verzeichnis für alle Agentenimplementierungen
+│   ├── __init__.py           # Macht 'agents' zu einem Python-Paket und exportiert Agentenklassen
+│   ├── base_agent.py         # Abstrakte Basisklasse, von der alle Agenten erben
+│   ├── random_agent.py       # Implementierung des Zufallsagenten
+│   ├── dqn_agent.py          # Implementierung des Deep Q-Network (DQN) Agenten
+│   ├── reinforce_agent.py    # Implementierung des REINFORCE (Policy Gradient) Agenten
+│   ├── a2c_agent.py          # Implementierung des Advantage Actor-Critic (A2C) Agenten
+│   ├── ppo_agent.py          # Implementierung des Proximal Policy Optimization (PPO) Agenten
+│   ├── genetic_agent.py      # Implementierung des Genetischen Algorithmus (GA) Agenten und des zugehörigen Controllers
+│   └── es_agent.py           # Implementierung des Evolutionäre Strategien (ES) Agenten/Controllers
+│
+├── gifs/                       # Verzeichnis für generierte GIF-Animationen der Testläufe
+│   ├── random_agent_example.gif # Beispiel: GIF für den Random Agent
+│   └── ppo_agent_example.gif    # Beispiel: GIF für den PPO Agent
+│
+├── models/                     # Verzeichnis für gespeicherte Modelle und Evaluierungsergebnisse
+│   ├── dqn_lunar_lander.pth    # Beispiel: Gespeichertes Modell für den DQN-Agenten
+│   ├── ga_best_lunar_lander.pth # Beispiel: Gespeichertes Modell für den GA-Agenten
+│   ├── reinforce_lunar_lander.pth # Beispiel: Gespeichertes Modell für REINFORCE
+│   ├── a2c_lunar_lander.pth    # Beispiel: Gespeichertes Modell für A2C
+│   ├── ppo_actor_lunar_lander.pth # Beispiel: Gespeichertes Actor-Modell für PPO
+│   ├── ppo_critic_lunar_lander.pth# Beispiel: Gespeichertes Critic-Modell für PPO
+│   ├── es_lunar_lander.pth     # Beispiel: Gespeichertes Modell für ES
+│   └── evaluation_summary.csv  # CSV-Datei mit den Ergebnissen der vergleichenden Evaluierung
+│
+├── config.py                   # Zentrale Konfigurationsdatei für alle Skripte und Parameter
+├── train.py                    # Skript zum Trainieren der verschiedenen lernfähigen Agenten
+├── test.py                     # Skript zum visuellen Testen und zur GIF-Erstellung
+├── evaluate.py                 # Skript zur vergleichenden Evaluierung aller trainierten Agenten
+├── requirements.txt            # Liste der Python-Paketabhängigkeiten
+└── README.md                   # Diese Beschreibungsdatei
+```
+
+*Hinweis: Die `.pth`-Modelldateien, `.gif`-Dateien und die `evaluation_summary.csv` in den entsprechenden Unterordnern werden erst nach der erfolgreichen Ausführung der Skripte (`train.py`, `test.py`, `evaluate.py`) erstellt.*
 
 ## Setup und Installation
 

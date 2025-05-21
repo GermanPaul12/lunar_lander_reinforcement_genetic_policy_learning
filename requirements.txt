@@ -1,0 +1,6 @@
+# lunar_lander_agents/requirements.txt
+gymnasium[box2d]>=0.28  # box2d for LunarLander
+numpy
+matplotlib
+torch
+imageio

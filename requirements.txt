@@ -4,3 +4,6 @@ numpy
 matplotlib
 torch
 imageio
+ipykernel  # for Jupyter Notebook support
+pandas
+seaborn

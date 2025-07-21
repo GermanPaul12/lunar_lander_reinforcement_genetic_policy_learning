@@ -1,11 +1,10 @@
-      
-# Multi-Agent Lunar Lander Projekt (DHBW Mannheim - Kurs Artifcial Intelligence)
+# Multi-Agent Lunar Lander Projekt (DHBW Mannheim - Kurs Aktuelle Data Science Entwicklungen - Reinforcement Learning)
 
-Dieses Projekt implementiert und vergleicht eine erweiterte Auswahl an Agententypen zur Lösung der LunarLander-v3 Umgebung von Gymnasium (ehemals OpenAI Gym). Es beinhaltet nun einen Zufallsagenten, verschiedene Reinforcement Learning Agenten wie Deep Q-Network (DQN), REINFORCE (Monte Carlo Policy Gradient), Advantage Actor-Critic (A2C) und Proximal Policy Optimization (PPO), sowie evolutionäre Ansätze wie einen Genetischen Algorithmus (GA) und Evolutionäre Strategien (ES) für direkte Policy-Suche. Das Hauptziel ist es, ein modulares und erweiterbares Framework für das Training dieser vielfältigen Agenten, die Bewertung ihrer Leistung und den direkten Vergleich ihrer Effektivität und Lerneigenschaften bereitzustellen. Die Projektstruktur wurde überarbeitet, um separate Skripte für Training (`train.py`), individuelles Testen (`test.py`) und vergleichende Evaluierung (`evaluate.py`) zu nutzen, wobei Konfigurationen zentral in `config.py` verwaltet werden. Dieses Projekt wurde im Rahmen des Kurses "Künstliche Intelligenz" an der DHBW Mannheim unter der Leitung von Prof. Dr. Maximillian Scherer entwickelt.
+Dieses Projekt implementiert und vergleicht eine erweiterte Auswahl an Agententypen zur Lösung der LunarLander-v3 Umgebung von Gymnasium (ehemals OpenAI Gym). Es beinhaltet nun einen Zufallsagenten, verschiedene Reinforcement Learning Agenten wie Deep Q-Network (DQN), REINFORCE (Monte Carlo Policy Gradient), Advantage Actor-Critic (A2C) und Proximal Policy Optimization (PPO), sowie evolutionäre Ansätze wie einen Genetischen Algorithmus (GA) und Evolutionäre Strategien (ES) für direkte Policy-Suche. Das Hauptziel ist es, ein modulares und erweiterbares Framework für das Training dieser vielfältigen Agenten, die Bewertung ihrer Leistung und den direkten Vergleich ihrer Effektivität und Lerneigenschaften bereitzustellen. Die Projektstruktur wurde überarbeitet, um separate Skripte für Training (`train.py`), individuelles Testen (`test.py`) und vergleichende Evaluierung (`evaluate.py`) zu nutzen, wobei Konfigurationen zentral in `config.py` verwaltet werden. Dieses Projekt wurde im Rahmen des Kurses "Aktuelle Data Science Entwicklungen - Reinforcement Learning" an der DHBW Mannheim entwickelt.
 
 ## Inhaltsverzeichnis
 
-- [Multi-Agent Lunar Lander Projekt (DHBW Mannheim - Kurs Artifcial Intelligence)](#multi-agent-lunar-lander-projekt-dhbw-mannheim---kurs-artifcial-intelligence)
+- [Multi-Agent Lunar Lander Projekt (DHBW Mannheim - Kurs Aktuelle Data Science Entwicklungen - Reinforcement Learning)](#multi-agent-lunar-lander-projekt-dhbw-mannheim---kurs-aktuelle-data-science-entwicklungen---reinforcement-learning)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [Projektübersicht](#projektübersicht)
   - [Funktionen](#funktionen)
@@ -599,4 +598,5 @@ Dieses Projekt stützt sich auf etablierte Konzepte und Algorithmen aus den Bere
 *   **Udacity Deep Reinforcement Learning Nanodegree:** Viele Online-Tutorials und Code-Strukturen für DQN und andere Algorithmen sind von den Materialien dieses Kurses inspiriert.
 *   **Spinning Up in Deep RL (OpenAI):** RL-Algorithmen erklärt und Implementierungsdetails liefert. [https://spinningup.openai.com/](https://spinningup.openai.com/)
 *   **Lilian Weng - "Policy Gradient Algorithms":** Ein sehr guter Blog-Beitrag, der verschiedene Policy-Gradient-Methoden verständlich erklärt. [https://lilianweng.github.io/posts/2018-04-08-policy-gradient/](https://lilianweng.github.io/posts/2018-04-08-policy-gradient/)
-*   **Vorlesungsmaterialien des Kurses "Künstliche Intelligenz" an der DHBW Mannheim** unter Leitung von Prof. Dr. Maximillian Scherer.
+*   **Vorlesungsmaterialien des Kurses "Künstliche Intelligenz" an der DHBW Mannheim** unter der Leitung von Prof. Dr. Maximillian Scherer.
+*   **Vorlesungsmaterialien des Kurses "Aktuelle Data Science Entwicklungen - Reinforcement Learning" an der DHBW Mannheim** unter der Leitung von Janina Patzer.
